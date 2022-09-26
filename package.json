@@ -1,0 +1,57 @@
+{
+  "name": "ipld-fixtures",
+  "version": "0.0.1",
+  "description": "utilities for ipld/codec-fixtures in javascript",
+  "author": "Russell Dempsey <1173416+SgtPooki@users.noreply.github.com>",
+  "license": "Apache-2.0 OR MIT",
+  "homepage": "https://github.com/ipfs-shipyard/js-ipld-fixtures#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs-shipyard/js-ipld-fixtures.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ipfs-shipyard/js-ipld-fixtures/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "bin": {
+    "ipld-fixtures": "./dist/src/run.js"
+  },
+  "type": "module",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "src",
+    "dist/src",
+    "!dist/test",
+    "!**/*.tsbuildinfo"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "eslintConfig": {
+    "extends": "ipfs",
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "scripts": {
+    "clean": "npx -y rimraf dist",
+    "build": "tsc",
+    "lint": "aegir lint",
+    "start": "node ./dist/src/run.js"
+  },
+  "dependencies": {
+    "execa": "^6.1.0",
+    "simple-git": "^3.14.1",
+    "yargs-parser": "^21.1.1"
+  },
+  "devDependencies": {
+    "aegir": "^37.5.4",
+    "typescript": "^4.8.3"
+  }
+}

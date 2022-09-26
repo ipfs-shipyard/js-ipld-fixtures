@@ -1,0 +1,15 @@
+{
+  "extends": "aegir/src/config/tsconfig.aegir.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "test",
+    "src",
+    "tmp/codec-fixtures/js/util.js",
+  ],
+  "exclude": [
+    "tmp",
+    "!tmp/codec-fixtures/js/util.js"
+  ]
+}
