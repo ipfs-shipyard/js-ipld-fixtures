@@ -43,7 +43,8 @@
     "clean": "npx -y rimraf dist",
     "build": "tsc",
     "lint": "aegir lint",
-    "start": "node ./dist/src/run.js"
+    "start": "node ./dist/src/run.js",
+    "release": "aegir release"
   },
   "dependencies": {
     "execa": "^6.1.0",
